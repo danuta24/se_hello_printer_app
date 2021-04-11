@@ -26,4 +26,5 @@ class FlaskrTestCase(unittest.TestCase):
         s = b'<greetings><imie>Danusia</imie> <msg>Hello World!</msg></greetings>'
         self.assertEqual(s, rv.data)
 
-        #<imie>Danusia</imie><msg>Hello World!</msg>',rv.data)
+#<imie>Danusia</imie><msg>Hello World!</msg>',rv.data)
+#Zmiany
