@@ -1,13 +1,13 @@
-PHONY: test
+.PHONY: test
 
 deps:
-	pip install -r requirements.txt
+	pip install -r requirements.txt;\
 	pip install -r test_requirements.txt
 
 test:
 	PYTHONPATH=. py.test --verbose -s
 
-run: main.py
+run:
 	python3 main.py
 
 lint:
@@ -21,3 +21,12 @@ docker_run: docker_build
 				--name hello-world-printer-dev \
 				-p 5000:5000 \
 				-d hello-world-printer
+
+USERNAME=danka24
+TAG=$(USERNAME)/hello-world-hello_world_printer
+
+docker_push: docker_build
+	@docker login --username $(USERNAME) --password $$[DOCKER_PASSWORD};\
+	docker tag hello-world-printer $(TAG);\
+	docker push $(TAG);\
+	docker logout;
