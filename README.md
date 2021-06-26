@@ -43,11 +43,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   # deaktywacja
   $ deactivate
   ```
+Integracja z TravisCI:
 
+Aplikacja zintegrowana jest z TravisCI. Polecenia dla Travisa wydawane są poprzez plik .travis.yml
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
@@ -84,3 +86,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
+  Badge dla TravisCI [![Build Status](https://travis-ci.com/danuta24/se_hello_printer_app.svg?branch=master)](https://travis-ci.com/danuta24/se_hello_printer_app)
+
+
+  Badge dla StatusCake [![StatusCake](https://app.statuscake.com/button/index.php?Track=6012894_ID&Days=1&Design=1)](https://app.statuscake.com/UptimeStatus.php?tid=6012894)
